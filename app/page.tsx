@@ -15,6 +15,7 @@ export default function Home() {
         <FormInput
           name="email"
           placeholder="Email"
+          errors={state.errors?.fieldErrors.email ?? []}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +30,7 @@ export default function Home() {
         <FormInput
           name="username"
           placeholder="Username"
+          errors={state.errors?.fieldErrors.username ?? []}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +48,8 @@ export default function Home() {
         <FormInput
           name="password"
           placeholder="Password"
-          error={state.error ?? ""}
+          type="password"
+          errors={state.errors?.fieldErrors.password ?? []}
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
