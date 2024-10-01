@@ -2,7 +2,11 @@
 
 import { useFormStatus } from "react-dom";
 
-export default function Button() {
+interface IParams {
+  text: string;
+}
+
+export default function Button({ text }: IParams) {
   const { pending } = useFormStatus();
   return pending ? (
     <button
@@ -12,8 +16,8 @@ export default function Button() {
       Loading
     </button>
   ) : (
-    <button className="rounded-2xl h-8 w-30 bg-gray-200 hover:bg-gray-300">
-      Log in
+    <button className="rounded-2xl h-8 w-30 bg-gray-200 hover:bg-gray-300 w-full">
+      {text}
     </button>
   );
 }
