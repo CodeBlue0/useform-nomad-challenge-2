@@ -25,7 +25,7 @@ const handleForm = async () => {
   "use server";
   const session = await getSession();
   session.destroy();
-  redirect("/");
+  redirect("/preview");
 };
 
 export default async function Profile() {
